@@ -15,6 +15,9 @@ let package = Package(
         .executableTarget(
             name: "AdventOfCode",
             dependencies: []),
+        .executableTarget(
+            name: "day1",
+            dependencies: []),
         .testTarget(
             name: "AdventOfCodeTests",
             dependencies: ["AdventOfCode"]),
