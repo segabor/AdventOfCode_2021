@@ -1,15 +1,14 @@
 import Foundation
 
-guard let firstLine = readLine() else {
-  print("0")
-  exit(0)
+let input: AnyIterator<String> = AnyIterator {
+  return readLine()  
 }
 
 
 var counter = UInt(0)
 
-var prevLine: String? = firstLine
-while let line = readLine() {
+var prevLine: String? = input.next()
+while let line = input.next() {
   if let l = prevLine,
     let d0 = UInt(l),
     let d1 = UInt(line),
